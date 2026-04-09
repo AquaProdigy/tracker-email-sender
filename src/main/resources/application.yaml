@@ -1,1 +1,13 @@
-spring.application.name=tracker-email-sender
+email:
+  sender:
+    token: "af5eb590b64443a50826edf58316fa60"
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+kafka:
+  topic: "EMAIL_SENDING_TASKS"

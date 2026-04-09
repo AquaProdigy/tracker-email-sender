@@ -1,4 +1,7 @@
 package org.roadmap.trackeremailsender.models;
 
-public class EmailLetterModel {
-}
+public record EmailLetterModel(
+        String email,
+        String title,
+        String description
+) {}

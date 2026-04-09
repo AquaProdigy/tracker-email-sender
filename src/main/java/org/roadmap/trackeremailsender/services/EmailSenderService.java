@@ -1,4 +1,7 @@
 package org.roadmap.trackeremailsender.services;
 
-public class EmailSenderService {
+import org.roadmap.trackeremailsender.models.EmailLetterModel;
+
+public interface EmailSenderService {
+    void sendLetterToEmail(EmailLetterModel emailLetterModel);
 }
