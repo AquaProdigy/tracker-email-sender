@@ -1,10 +1,10 @@
 email:
   sender:
-    token: "af5eb590b64443a50826edf58316fa60"
+    token: ${MAIL_SENDER_TOKEN}
 
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     consumer:
       group-id: email-sender-group
       auto-offset-reset: earliest
@@ -13,9 +13,16 @@ spring:
       properties:
         spring.json.use.type.headers: false
         spring.json.value.default.type: org.roadmap.trackeremailsender.models.EmailLetterModel
-
+  mail:
+    host: smtp.gmail.com
+    password: ${MAIL_PASSWORD}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
 kafka:
-  topic: "EMAIL_SENDING_TASKS"
+  topic: ${KAFKA_TOPIC_NAME}
 
 
 server:
