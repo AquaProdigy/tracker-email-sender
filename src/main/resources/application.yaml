@@ -4,7 +4,7 @@ email:
 
 spring:
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: ${KAFKA_HOST}
     consumer:
       group-id: email-sender-group
       auto-offset-reset: earliest
