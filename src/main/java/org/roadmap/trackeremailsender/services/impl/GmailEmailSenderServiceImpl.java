@@ -2,7 +2,7 @@ package org.roadmap.trackeremailsender.services.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.roadmap.trackeremailsender.models.EmailLetterModel;
+import org.roadmap.trackeremailsender.dto.EmailLetterModel;
 import org.roadmap.trackeremailsender.services.EmailSenderService;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;

@@ -2,8 +2,7 @@ package org.roadmap.trackeremailsender.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.roadmap.trackeremailsender.models.EmailLetterModel;
-import org.springframework.beans.factory.annotation.Value;
+import org.roadmap.trackeremailsender.dto.EmailLetterModel;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 

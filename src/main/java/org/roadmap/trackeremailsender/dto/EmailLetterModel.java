@@ -1,4 +1,4 @@
-package org.roadmap.trackeremailsender.models;
+package org.roadmap.trackeremailsender.dto;
 
 public record EmailLetterModel(
         String email,
