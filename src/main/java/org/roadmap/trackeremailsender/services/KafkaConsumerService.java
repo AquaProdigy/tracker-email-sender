@@ -10,14 +10,12 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 public class KafkaConsumerService {
-    private static final String CONCURRENCY_FOR_KAFKA = "5";
     private final EmailSenderService emailSenderService;
 
 
-    @KafkaListener(topics = "${kafka.topic}", concurrency = CONCURRENCY_FOR_KAFKA)
+    @KafkaListener(topics = "${kafka.topic}", concurrency = "${kafka.consumer.concurrency:5}")
     public void listen(EmailLetterModel emailLetterModel) {
-        log.info("Got a kafka message - {}", emailLetterModel);
-
         emailSenderService.sendLetterToEmail(emailLetterModel);
+        log.info("Got a kafka message - {}", emailLetterModel);
     }
 }

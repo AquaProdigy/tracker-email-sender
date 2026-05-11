@@ -13,6 +13,7 @@ spring:
       properties:
         spring.json.use.type.headers: false
         spring.json.value.default.type: org.roadmap.trackeremailsender.models.EmailLetterModel
+
   mail:
     host: smtp.gmail.com
     password: ${MAIL_PASSWORD}
@@ -23,6 +24,8 @@ spring:
       mail.smtp.starttls.enable: true
 kafka:
   topic: ${KAFKA_TOPIC_NAME}
+  consumer:
+    concurrency: 5
 
 
 server:

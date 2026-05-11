@@ -24,7 +24,7 @@ public class GmailEmailSenderServiceImpl implements EmailSenderService {
             message.setText(emailLetterModel.description());
             javaMailSender.send(message);
         } catch (MailException e) {
-            log.error("Error while sending email to email - {} - {}", e.getMessage(), e.getStackTrace());
+            log.error("Error while sending email to - {} - {}", emailLetterModel.email(), e.getMessage(), e);
         }
     }
 }
