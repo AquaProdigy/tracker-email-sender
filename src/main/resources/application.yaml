@@ -12,7 +12,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.use.type.headers: false
-        spring.json.value.default.type: org.roadmap.trackeremailsender.models.EmailLetterModel
+        spring.json.value.default.type: org.roadmap.trackeremailsender.dto.EmailLetterModel
 
   mail:
     host: smtp.gmail.com
